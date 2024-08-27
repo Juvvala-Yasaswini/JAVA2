@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class SimpleInterest {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter principal, years, senior citizen (y/n): ");
+        double principal = scanner.nextDouble();
+        int years = scanner.nextInt();
+        char seniorCitizen = scanner.next().charAt(0);
+        scanner.close();
+
+        double rate = (seniorCitizen == 'y' || seniorCitizen == 'Y') ? 0.12 : 0.10;
+        double interest = principal * rate * years;
+        System.out.println("Interest: " + interest);
+    }
+}
